@@ -6,5 +6,6 @@ RUN apt-get install -y ca-certificates curl gnupg lsb-release  \
 && apt-get update \
 && apt-get install -y docker-ce docker-ce-cli containerd.io 
 
-ENTRYPOINT service docker start && /bin/bash
+ENTRYPOINT service docker start && /bin/bash && tail -f /dev/null
+
 
